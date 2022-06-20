@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1,h2,h3,h4,h5,h6 {
+    @apply font-heading;
+  }
+
+  a, p, input, span, div, textarea, button {
+    @apply font-sans;
+  }
+}
+
+/* General site styles */
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+* {
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  word-wrap: break-word;
+  text-rendering: optimizeLegibility;
+  width: 100vw;
+}
+/* /General site styles */
+
+.audioBtn {
+  border-radius: 50%;
+  padding: 25px;
+  background: #e11d48;
+  border: 2px solid #000;
+  box-shadow: rgba(0 0 0) 5px 5px;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 50;
+}
+
+.audioBtn img {
+  width: 25px;
+}
+
+.no_scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.no_scrollbar::-webkit-scrollbar {
+  display: none;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		%sveltekit.head%
+	</head>
+	<body>
+		<div>%sveltekit.body%</div>
+		<audio id="audioBtn" src="/audio/palette-town-theme.mp3" preload="auto"></audio>
+		<button class="audioBtn" onClick="togglePlay()">
+		  <img id="audioImg" src="/img/icons/audio-off.png" alt="audio" />
+		</button>
+	</body>
+	<script>
+		var audio = document.getElementById("audioBtn");
+		var audioImg = document.getElementById("audioImg");
+		var isPlaying = false;
+
+		function togglePlay() {
+			isPlaying ? audio.pause() : audio.play();
+		};
+
+		audio.onplaying = function() {
+			isPlaying = true;
+			audioImg.src="/img/icons/audio-on.png";
+		};
+
+		audio.onpause = function() {
+			isPlaying = false;
+			audioImg.src="/img/icons/audio-off.png";
+		};
+	</script>
+</html>
