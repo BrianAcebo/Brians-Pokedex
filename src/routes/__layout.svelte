@@ -1,5 +1,4 @@
 <script>
-  import MainNav from "$lib/components/mainNav.svelte";
   import "../styles.css";
 </script>
 
