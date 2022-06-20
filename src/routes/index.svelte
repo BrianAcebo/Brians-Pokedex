@@ -61,21 +61,17 @@
 
 
 <svelte:head>
-  {#if $selectedPokemon}
-  <title>{$selectedPokemon.name}</title>
-  {:else}
-  <title>Search Through Pokédex</title>
-  {/if}
+  <title>Search Through Brian's Pokédex</title>
 </svelte:head>
 
 
 <!-- Main Container -->
-<div class="w-3/4 mx-auto my-24 max-w-4xl relative">
+<div class="md:w-3/4 w-[90%] mx-auto my-24 max-w-4xl relative">
   <div class="items-center justify-center flex flex-col w-full md:flex-row relative md:h-[75vh]">
 
 
     <!-- Left pokedex -->
-    <div class="w-full md:w-1/2 p-10 bg-primary shadow-base border-2 border-black grid md:absolute left-0 bottom-0 m-0">
+    <div class="w-full md:w-1/2 md:p-10 p-6 bg-primary shadow-base border-2 border-black grid md:absolute left-0 bottom-0 m-0">
 
 
       <!-- Search -->
@@ -125,14 +121,14 @@
 
 
     <!-- Hinges -->
-    <div class="absolute bg-black z-20 md:w-5 md:h-24 md:left-auto rounded-md my-5 md:bottom-[250px] bottom-[438px] h-5 w-20 left-5"></div>
-    <div class="absolute bg-black z-20 md:w-5 md:h-24 md:right-auto rounded-md my-5 md:bottom-[15px] bottom-[438px] h-5 w-20 right-5"></div>
+    <div class="md:block hidden absolute bg-black z-20 md:w-5 md:h-24 md:left-auto rounded-md my-5 md:bottom-[250px] bottom-[438px] h-5 w-20 left-5"></div>
+    <div class="md:block hidden absolute bg-black z-20 md:w-5 md:h-24 md:right-auto rounded-md my-5 md:bottom-[15px] bottom-[438px] h-5 w-20 right-5"></div>
     <!-- /Hinges -->
 
 
     <!-- Right pokedex -->
     <div class="w-full md:w-1/2 grid md:absolute right-0 bottom-0 m-0">
-      <div class="w-full p-10 right_pokedex bg-primary shadow-base border-2 border-black">
+      <div class="w-full md:p-10 p-6 right_pokedex bg-primary shadow-base border-2 border-black">
 
 
         <!-- Right Container -->
