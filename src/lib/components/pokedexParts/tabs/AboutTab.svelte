@@ -18,8 +18,8 @@
 
 
 <!-- Description -->
-<p class="mb-5">Height: {!$selectedPokemon ? calculateHeightAndWeight($selectedPokemon.height) : '1.7'}m</p>
-<p class="mb-5">Weight: {!$selectedPokemon ? calculateHeightAndWeight($selectedPokemon.weight) : '81'}kg</p>
+<p class="mb-5">Height: {$selectedPokemon.height ? calculateHeightAndWeight($selectedPokemon.height) : '1.7'}m</p>
+<p class="mb-5">Weight: {$selectedPokemon.weight ? calculateHeightAndWeight($selectedPokemon.weight) : '81'}kg</p>
 <!-- /Description -->
 
 
