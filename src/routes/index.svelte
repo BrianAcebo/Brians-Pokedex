@@ -23,7 +23,7 @@
 
 <script>
   import { Circle } from 'svelte-loading-spinners';
-  import PokeCard from "$lib/components/pokeCard.svelte";
+  import PokeCard from "$lib/components/PokeCard.svelte";
   import MiddleBtns from "$lib/components/pokedexParts/MiddleBtns.svelte";
   import CircleAndArrows from "$lib/components/pokedexParts/CircleAndArrows.svelte";
   import TabsNav from "$lib/components/pokedexParts/tabs/TabsNav.svelte";
