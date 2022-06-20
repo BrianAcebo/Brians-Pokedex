@@ -11,7 +11,7 @@
 
 
 <!-- Screen -->
-<div class="w-full h_16rem bg-light-grey mb-8 rounded-md shadow-base border-2 border-black flex justify-center items-center">
+<div class="w-full h_15rem bg-light-grey mb-8 rounded-md shadow-base border-2 border-black flex justify-center items-center">
 
 
   <!-- Selected Pokemon -->
@@ -134,7 +134,7 @@
 
 <style>
   /* Issues with tailwind so added fixed class */
-  .h_16rem {
-    height: 16rem;
+  .h_15rem {
+    height: 15rem;
   }
 </style>

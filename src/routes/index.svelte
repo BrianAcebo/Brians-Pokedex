@@ -1,7 +1,7 @@
 <script context="module">
   // Fetch all pokemon data from PokeAPI using SSR
   export async function load({params}) {
-    const url = `https://pokeapi.co/api/v2/pokemon`;
+    const url = `https://pokeapi.co/api/v2/pokemon?limit=151`;
     const res = await fetch(url);
     const data = await res.json();
     const loadedPokemon = data.results.map((data, index) => {
@@ -40,6 +40,7 @@
   let searchTerm = '';
   let searchResults;
   let searching = false;
+  let emptyResults = false;
 
   $: {
 
@@ -48,21 +49,18 @@
       // Trigger search display and filter through pokemon
       searching = true;
       searchResults = allPokemon.filter(pokemon => pokemon.name.toLowerCase().includes(searchTerm.toLowerCase()));
+      emptyResults = searchResults.length == 0;
     } else {
 
       // Hide search display and empty search results
       searching = false;
       searchResults = [];
+      emptyResults = false;
     }
 
   }
 
 </script>
-
-
-<svelte:head>
-  <title>Search Through Brian's Pokédex</title>
-</svelte:head>
 
 
 <!-- Main Container -->
@@ -87,9 +85,17 @@
 
         {#if searchResults}
 
-        {#each searchResults as pokemon}
-          <PokeCard pokemon={pokemon} />
-        {/each}
+          {#if emptyResults}
+
+          <p class="text-center">Sorry, we couldn't find what you're looking for.</p>
+
+          {:else}
+
+          {#each searchResults as pokemon}
+            <PokeCard pokemon={pokemon} />
+          {/each}
+
+          {/if}
 
         {:else}
 

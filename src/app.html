@@ -1,11 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!-- Meta -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <meta property="description" name="description" content="Search through the original 151 Pokémon with Brian's pokédex!" />
+    <meta name="application-name" content="Brian's Pokedex" />
+    <meta name="keywords" id="keywords" content="Pokemon, original, pokedex" />
+
+    <meta property="og:site_name" content="Brian's Pokedex" />
+    <meta property="og:description" name="og:description" content="Search through the original 151 Pokémon with Brian's pokédex!" />
+    <meta property="og:title" name="og:title" content="Search Through Brian's Pokédex" />
+    <meta property="og:type" name="og:type" content="website" />
+    <meta property="og:url" name="og:url" content="https://brians-pokedex.vercel.app/" />
+    <meta property="og:image" content="/img/logo/webclip.png" />
+
+		<link href="/img/logo/webclip.png" rel="apple-touch-icon" />
+    <link rel="icon"  href="/img/logo/favicon.ico" />
+
+		<title>Search Through Brian's Pokédex</title>
+
 		%sveltekit.head%
 	</head>
+
 	<body>
 		<div>%sveltekit.body%</div>
 		<audio id="audioBtn" src="/audio/palette-town-theme.mp3" preload="auto"></audio>
@@ -13,7 +32,9 @@
 		  <img id="audioImg" src="/img/icons/audio-off.png" alt="audio" />
 		</button>
 	</body>
+
 	<script>
+		// Play audio on click
 		var audio = document.getElementById("audioBtn");
 		var audioImg = document.getElementById("audioImg");
 		var isPlaying = false;
@@ -32,4 +53,5 @@
 			audioImg.src="/img/icons/audio-off.png";
 		};
 	</script>
+
 </html>
